@@ -6,7 +6,8 @@ class Solution:
         for i in range(0,len(s)-1):
             if (i+10)<=len(s):
                 temp_s = s[i:i+10]
-                list = map(temp_s,hash(temp_s))
+                if temp_s in s[i+1:len(s)] :
+                    list.add(temp_s)
         print list
     def findRepeatedDnaSequences_others_way(self, s):
         repeatSeq = set()
