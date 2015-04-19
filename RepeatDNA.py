@@ -3,10 +3,11 @@ __author__ = 'lenovo'
 class Solution:
     def findRepeatedDnaSequences(self, s):
         list = set([])
+        lens = len(s)
         for i in range(0,len(s)-1):
-            if (i+10)<=len(s):
+            if (i+10)<=lens:
                 temp_s = s[i:i+10]
-                if temp_s in s[i+1:len(s)] :
+                if temp_s in s[i+1:lens] :
                     list.add(temp_s)
         print list
     def findRepeatedDnaSequences_others_way(self, s):
